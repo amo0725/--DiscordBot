@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Config = require('./config');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
