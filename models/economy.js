@@ -14,7 +14,7 @@ const Economy = class Economy {
     }
 
     static FetchbyuserId(userId,serverId){
-        return db.execute('SELECT * FROM economy INNER JOIN user WHERE userId = ? AND serverId = ?',[userId,serverId]);
+        return db.execute('SELECT * FROM economy LEFT JOIN user ON economy.uid = user.uid WHERE userId = ? AND serverId = ?',[userId,serverId]);
     }
 
     static Dailycoin(uid){
